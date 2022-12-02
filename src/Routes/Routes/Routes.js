@@ -7,7 +7,6 @@ import Phones1 from "../../Pages/Phones/Phones1";
 import Phones2 from "../../Pages/Phones/Phones2";
 import Register from "../../Pages/Register/Register";
 import PrivateRoutes from "../PrivateRoute/PrivateRoutes";
-// import DashBoard from './../../Pages/DashBoard/DashBoard/DashBoard';
 import Buyer from './../../Components/DashBoard/Buyer/Buyer';
 import Seller from "../../Components/DashBoard/Seller/Seller";
 import Admin from "../../Components/DashBoard/Admin/Admin";
@@ -22,7 +21,6 @@ import AdminSeller from "../../Layouts/HomeLayout/New Dashboard/seller/AdminSell
 import AdminBuyer from "../../Layouts/HomeLayout/New Dashboard/Buyer/AdminBuyer";
 import DashBoardHome from "../../Layouts/HomeLayout/New Dashboard/DashBoardHome/DashBoardHome";
 // import BannerCategory from "../../Components/Home/Banner/BannerCategory";
-// import Banner from "../../Components/Home/Banner/Banner";
 
 
 
