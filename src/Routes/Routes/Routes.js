@@ -64,34 +64,6 @@ const router = createBrowserRouter([
                 element: <Blogs></Blogs>,
                 loader: () => fetch('https://assignment12-server-one.vercel.app/blog'),
             },
-            // {
-            //     path: '/category',
-            //     element: <Banner></Banner>,
-            // },
-            // {
-            //     
-            //      ,
-            // },
-            // {
-            //     path: 
-            //     element: ,
-            // },
-            // {
-            //     path: 
-            //     element: ,
-            // },
-            // {
-            //     path: 
-            //     element: ,
-            // },
-            // {
-            //     path: '/admin',
-            //     element: <AdminRoute><Admin></Admin></AdminRoute>,
-            // },
-            // {
-            //     
-            //     element: ,
-            // },
 
         ]
     },
@@ -139,39 +111,6 @@ const router = createBrowserRouter([
             },
         ]
     },
-
-
-
-    //  New DashBoardLayouts Finished here
-
-    // {
-
-    //     path: '/dashboard',
-    //     element: <DashBoard></DashBoard>,
-    //     children: [
-    //         {
-    //             path: 'product',
-    //             element: <SellerRoute><MyProduct></MyProduct></SellerRoute>,
-    //         }
-
-
-    //         //     {
-    //         //         path: 'dashboard/admin',
-    //         //         element: <AdminRoute><Admin></Admin></AdminRoute>,
-    //         //     },
-    //         //     {
-    //         //         path: 'dashboard/buyer',
-    //         //         element: <BuyerRoute> <Buyer></Buyer> </BuyerRoute>,
-    //         //     },
-    //         //     {
-    //         //         path: 'ashboard/seller',
-    //         //         element: <SellerRoute> <Seller></Seller> </SellerRoute>,
-    //         //     },
-    //         //     {
-    //         //         path:'ashboard/seldler'
-    //         //     },
-    //     ]
-    // },
     {
         path: '/*',
         element: <Error></Error>
