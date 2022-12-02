@@ -69,7 +69,7 @@ const router = createBrowserRouter([
             //     element: <Banner></Banner>,
             // },
             // {
-            //     path: '/buyer',
+            //     
             //     element: <BuyerRoute> <Buyer></Buyer> </BuyerRoute>,
             // },
             // {
