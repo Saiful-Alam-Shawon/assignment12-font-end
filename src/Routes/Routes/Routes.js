@@ -90,7 +90,7 @@ const router = createBrowserRouter([
             // },
             // {
             //     
-            //     element: <PrivateRoutes><DashBoard></DashBoard></PrivateRoutes>,
+            //     element: <PrivateRoutes><DashBoard>,
             // },
 
         ]
