@@ -73,7 +73,7 @@ const router = createBrowserRouter([
             //     element: <BuyerRoute> <Buyer></Buyer> </BuyerRoute>,
             // },
             // {
-            //     path: '/seller',
+            //     path: 
             //     element: <Seller></Seller>,
             // },
             // {
