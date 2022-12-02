@@ -9,7 +9,7 @@
 //     const [category, setCategory] = useState();
 
 //     useEffect(() => {
-//         fetch('https://assignment12-server-one.vercel.app/cat')
+//         fetch('http://localhost:5000/cat')
 //             .then(res => res.json())
 //             .then(data => setCategory(data))
 //     }, []);

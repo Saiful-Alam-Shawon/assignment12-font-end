@@ -7,11 +7,11 @@ const useSeller = email => {
 
     useEffect(() => {
         if (email) {
-            fetch(`https://assignment12-server-one.vercel.app/seller/${email}`)
+            fetch(`http://localhost:5000/seller/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     // console.log(data);
-                    setIsSeller(data);
+                    setIsSeller(data.isSeller);
                     setIsSellerLoading(false);
                 })
         }

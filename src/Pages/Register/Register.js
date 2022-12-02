@@ -41,7 +41,7 @@ const Register = () => {
         }
 
 
-        fetch('https://assignment12-server-one.vercel.app/register', {
+        fetch('http://localhost:5000/register', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

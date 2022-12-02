@@ -1,14 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthShare } from '../../Context/Context Api/AuthContext';
 
 const Navbar = () => {
 
     const { logOut, user } = useContext(AuthShare);
+    const [isreload, setIsreload] = useState(true);
+
 
     const handleLogOut = () => {
         logOut()
-            .then(() => { })
+            .then(() => {
+                setIsreload(!isreload);
+            })
             .catch(error => console.log(error.message));
     }
     // console.log(user.uid);

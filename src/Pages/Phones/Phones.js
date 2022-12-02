@@ -7,9 +7,11 @@ const Phones = () => {
     const [phones, setPhones] = useState([]);
     const { modal } = useContext(AuthShare);
 
+    //   https://assignment12-server-one.vercel.app
+
 
     useEffect(() => {
-        fetch('https://assignment12-server-one.vercel.app/iPhone')
+        fetch('http://localhost:5000/iPhone')
             .then(res => res.json())
             .then(data => setPhones(data))
         // .then(data => console.log(data))

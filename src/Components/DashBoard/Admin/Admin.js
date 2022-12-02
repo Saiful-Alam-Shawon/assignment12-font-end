@@ -17,7 +17,7 @@ const Admin = () => {
 
     const handleDelete = id => {
         // console.log(id);
-        fetch(`https://assignment12-server-one.vercel.app/deletingUser/${id}`, {
+        fetch(`http://localhost:5000/deletingUser/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -32,7 +32,7 @@ const Admin = () => {
 
     const handleVerify = id => {
         // console.log(id);
-        fetch(`https://assignment12-server-one.vercel.app/user/verify/${id}`, {
+        fetch(`http://localhost:5000/user/verify/${id}`, {
             method: 'PUT'
         })
             .then(res => res.json())
@@ -48,7 +48,7 @@ const Admin = () => {
 
 
     useEffect(() => {
-        fetch('https://assignment12-server-one.vercel.app/all')
+        fetch('http://localhost:5000/all')
             .then(res => res.json())
             .then(data => setAllAdminUsers(data))
         setLoading(false);
@@ -60,7 +60,7 @@ const Admin = () => {
     // const { data: users = [] } = useQuery({
     //     queryKey: ['users'],
     //     queryFn: async () => {
-    //         const res = await fetch('https://assignment12-server-one.vercel.app/all');
+    //         const res = await fetch('http://localhost:5000/all');
     //         const data = await res.json();
     //         return data;
     //     }

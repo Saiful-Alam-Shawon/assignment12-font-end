@@ -50,7 +50,7 @@ const Login = () => {
 
                 // setGoogleUser(googleUser1);
 
-                fetch('https://assignment12-server-one.vercel.app/register', {
+                fetch('http://localhost:5000/register', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -78,7 +78,7 @@ const Login = () => {
     }
 
     // const google = (googleUser) => {
-    //     fetch('https://assignment12-server-one.vercel.app/register', {
+    //     fetch('http://localhost:5000/register', {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json'

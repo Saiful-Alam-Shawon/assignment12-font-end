@@ -20,6 +20,7 @@ import DashBoardLayout from "../../Layouts/HomeLayout/New Dashboard/DashBoardLay
 import AdminSeller from "../../Layouts/HomeLayout/New Dashboard/seller/AdminSeller";
 import AdminBuyer from "../../Layouts/HomeLayout/New Dashboard/Buyer/AdminBuyer";
 import DashBoardHome from "../../Layouts/HomeLayout/New Dashboard/DashBoardHome/DashBoardHome";
+import Pay from "../../Pages/Pay";
 // import BannerCategory from "../../Components/Home/Banner/BannerCategory";
 
 
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blogs></Blogs>,
-                loader: () => fetch('https://assignment12-server-one.vercel.app/blog'),
+                loader: () => fetch('http://localhost:5000/blog'),
             },
 
         ]
@@ -96,6 +97,11 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/dash1boar1db1',
                 element: <BuyerRoute><Buyer></Buyer></BuyerRoute>
+            },
+            {
+                path: '/dashboard/dash1boar1db1/pay/:id',
+                element: <Pay></Pay>,
+                loader: ({ params }) => fetch(`http://localhost:5000/dashboard/dash1boar1db1/pay/${params.id}`)
             },
 
             // for Seller

@@ -3,7 +3,7 @@ import React from 'react';
 const Ad = ({ category1 }) => {
 
 
-    console.log(category1?.name);
+    // console.log(category1?.name);
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">

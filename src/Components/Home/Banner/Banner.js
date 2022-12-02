@@ -24,7 +24,7 @@ const Banner = () => {
     const { user } = useContext(AuthShare)
 
     useEffect(() => {
-        fetch('https://assignment12-server-one.vercel.app/')
+        fetch('http://localhost:5000/')
             .then(res => res.json())
             .then(data => setCategory(data))
     }, []);

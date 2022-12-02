@@ -10,12 +10,12 @@ const MyProduct = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     // const [isreload, setIsreload] = useState(true);
-    const [isreload, setIsreload] = useState(true)
+    const [isreload, setIsreload] = useState(true);
 
 
 
     const handleAds = (product) => {
-        fetch('https://assignment12-server-one.vercel.app/ads', {
+        fetch('http://localhost:5000/ads', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const MyProduct = () => {
 
     const handleDelete = id => {
         // console.log(id);
-        fetch(`https://assignment12-server-one.vercel.app/deletingProduct/${id}`, {
+        fetch(`http://localhost:5000/deletingProduct/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -60,7 +60,7 @@ const MyProduct = () => {
 
 
     useEffect(() => {
-        fetch(`https://assignment12-server-one.vercel.app/sellerProductsByEmail?email=${user?.email}`)
+        fetch(`http://localhost:5000/sellerProductsByEmail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -70,7 +70,7 @@ const MyProduct = () => {
             })
     }, [user?.email, isreload]);
 
-    // console.log(`https://assignment12-server-one.vercel.app/sellerProductsByEmail?email=${user?.email}`);
+    // console.log(`http://localhost:5000/sellerProductsByEmail?email=${user?.email}`);
     // console.log(products.length);
     // console.log(user.email);
     // no
@@ -83,13 +83,13 @@ const MyProduct = () => {
                     <div key={product._id} >
                         <div className="card w-96 bg-neutral text-neutral-content">
                             <div className="card-body items-center text-center">
-                                <h2 className="card-title"> Name: {product?.name}</h2>
-                                <p>Price: {product?.price}</p>
-                                <p>Used Year: {product?.usedYear}</p>
-                                <p> {product?.Category}</p>
-                                <p>{product?.Condition}</p>
-                                <p>Mobile: {product?.mobile}</p>
-                                <p>Seller Location: {product?.location}</p>
+                                <h2 className="card-title"> Name: {product?.Name}</h2>
+                                <p>Price: {product?.Price}</p>
+                                <p>Used Year: {product?.UsedYear}</p>
+                                <p>Category: {product?.Category}</p>
+                                <p>Condition{product?.Condition}</p>
+                                <p>Mobile: {product?.Mobile}</p>
+                                <p>Seller Location: {product?.Location}</p>
                                 <p>Seller Email: {product?.userEmail}</p>
                                 <div className="card-actions justify-end">
                                     <button onClick={() => handleDelete(product._id)} className="btn btn-primary">Delete</button>

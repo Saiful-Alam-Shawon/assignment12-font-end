@@ -14,7 +14,7 @@ const Modal = ({ modal }) => {
 
         // console.log({ ...modal, userEmail });
 
-        fetch('https://assignment12-server-one.vercel.app/booked', {
+        fetch('http://localhost:5000/booked', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

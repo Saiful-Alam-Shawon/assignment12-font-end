@@ -21,7 +21,7 @@ const Seller = () => {
 
     const productSubmit = data => {
 
-        fetch('https://assignment12-server-one.vercel.app/allProducts', {
+        fetch('http://localhost:5000/allProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -67,7 +67,7 @@ const Seller = () => {
 
     //     // console.log(data);
 
-    //     fetch('https://assignment12-server-one.vercel.app/allProducts', {
+    //     fetch('http://localhost:5000/allProducts', {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json'

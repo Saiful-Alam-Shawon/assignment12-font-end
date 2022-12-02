@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import useAdmin from '../../../../Components/DashBoard/UseAdmin/useAdmin';
 import useBuyer from '../../../../Components/DashBoard/UseBuyer/useBuyer';
@@ -7,6 +7,8 @@ import Navbar from '../../../../Shared/Navbar/Navbar';
 import useSeller from './../../../../Components/DashBoard/useSeller/useSeller';
 
 const DashBoardLayout = () => {
+
+
 
     const { user } = useContext(AuthShare);
     const [isAdmin] = useAdmin(user?.email);
@@ -21,8 +23,8 @@ const DashBoardLayout = () => {
         <li><Link to='/dashboard/buyer'> Buyers</Link></li>
     </>
     const sellerMenu = <>
-        <li><Link to='/dashboard/product'>AllProducts</Link></li>
-        <li><Link to='/dashboard/dashboards'> Add Products</Link></li>
+        <li><Link to='/dashboard/product'>My Products</Link></li>
+        <li ><Link to='/dashboard/dashboards'> Add Products</Link></li>
     </>
     const buyerMenu = <><li><Link to='/dashboard/dash1boar1db1'>My Orders</Link></li></>
 

@@ -6,18 +6,26 @@ import Ad from './Ad';
 const Ads = () => {
 
     const { user, } = useContext(AuthShare);
-    const [ads, setads] = useState([]);
+    const [advertise, setAdvertise] = useState([]);
     const [isSeller] = useSeller(user?.email);
+    const [isreload, setIsreload] = useState(true);
+    const [loading, setLoading] = useState(true);
+
+
+    console.log(isSeller);
+    console.log(advertise.length);
 
     useEffect(() => {
-        fetch('https://assignment12-server-one.vercel.app/ads')
+        fetch('http://localhost:5000/ads')
             .then(res => res.json())
-            .then(data => setads(data))
-    }, []);
+            .then(data => setAdvertise(data))
+        setLoading(false);
+        // setIsreload(!isreload);
+    }, [loading, isreload]);
 
+    // && isSeller
 
-
-    if (ads.length > 0 && isSeller)
+    if (advertise.length > 0)
         return (
 
             <>
@@ -27,7 +35,7 @@ const Ads = () => {
                     <h2 className='text-4xl font-bold md:my-4 lg:my-8 text-center'> Advertise </h2>
                     <div className='grid grid-cols-3 '>
                         {
-                            ads?.map(category1 => <Ad
+                            advertise?.map(category1 => <Ad
                                 key={category1._id}
                                 category1={category1}
                             >

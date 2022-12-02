@@ -8,7 +8,7 @@ const AdminBuyer = () => {
 
     const handleDelete = id => {
         // console.log(id);
-        fetch(`https://assignment12-server-one.vercel.app/deletingUser/${id}`, {
+        fetch(`http://localhost:5000/deletingUser/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -24,7 +24,7 @@ const AdminBuyer = () => {
 
 
     useEffect(() => {
-        fetch('https://assignment12-server-one.vercel.app/buyer1admin')
+        fetch('http://localhost:5000/buyer1admin')
             .then(res => res.json())
             .then(data => setAllAdminBuyerUsers(data))
         setLoading(false);

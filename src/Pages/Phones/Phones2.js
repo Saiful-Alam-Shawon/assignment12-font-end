@@ -9,7 +9,7 @@ const Phones2 = () => {
     const [phones2, setPhones2] = useState([]);
 
     useEffect(() => {
-        fetch('https://assignment12-server-one.vercel.app/Huawei')
+        fetch('http://localhost:5000/Huawei')
             .then(res => res.json())
             .then(data => setPhones2(data))
         // .then(data => console.log(data))
