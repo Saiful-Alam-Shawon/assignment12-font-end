@@ -74,7 +74,7 @@ const router = createBrowserRouter([
             // },
             // {
             //     path: 
-            //     element: <Seller></Seller>,
+            //     element: ,
             // },
             // {
             //     path: 
